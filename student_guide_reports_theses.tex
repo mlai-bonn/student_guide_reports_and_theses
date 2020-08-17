@@ -1,0 +1,251 @@
+\documentclass[nodate]{proc}
+\usepackage{url, hyperref}
+
+\usepackage{titling}
+
+\usepackage[english]{babel}
+\usepackage{biblatex}
+\bibliography{bibliography.bib }
+
+\date{} % remove/ fill in to include date
+
+\begin{document}
+
+\title{\textbf{Student guide for reports and theses at MLAI}}
+% \begin{titlepage}
+% 	\begin{center}
+% 		
+% 	\end{center}
+% \end{titlepage}
+
+\maketitle
+
+\begin{abstract}
+	 \textbf{red thread} (continuity) the reader always has to know what a section is about and how it is relevant to the overall context $-$ \textbf{target audience} explain everything in a way such that a colleague of yours would understand it $-$ \textbf{inner logic} define everything properly and uniquely, do not contradict yourself  $-$ \textbf{no plagiarism} correctly reference everything that is not your own work  $-$ \textbf{critial self-reflection} motivate and explain all choices and point out strengths and flaws of your own work
+\end{abstract}
+
+\tableofcontents
+
+%\newpage
+
+\section{Introduction}
+
+\paragraph{Disclaimer}
+
+\section{Scientific writing in general}
+This section contains best practices, tips and tricks on good formal, scientific writing. Presenting your work in an accessible way is as much part of the scientific process as developing methods and conducting experiments. A well strcutured text reflects sound methodical thinking and makes it easier for the reader to concentrate on the content of your work.
+
+\subsection{Language}
+\begin{itemize}
+
+	\item Style
+	\begin{itemize}
+		\item Use present tense (exception: Related Work and parts of Conclusion)
+		\item No contractions: don't $\rightarrow$ do not, hasn't $\rightarrow$ has not
+		\item Use active voice "X conducted the experiments" not "the experiments were conducted by X"
+		\item Avoid long sentences spanning multiple lines (it is okay to write long sentences intiially so you have all your thoughts collected in the document. When subsequently improving this first draft, break down those long sentences into shorter ones so the reader does not get lost.)
+		\item Chose between British and American English and stay consistent within it
+		\item Use spell checkers
+	\end{itemize}
+	\item Instead of "I" use "We", as in you, the author, walks the reader through your thinking process
+\end{itemize}
+
+\subsection{Formalia}
+\begin{itemize}
+
+	\item The document has to be a \textbf{PDF}.
+
+	\item Length
+	\begin{itemize}
+		\item PG, Seminarreport, Labreport: 8-10 pages per person required
+		\item BT: required are 25-50 pages (we recommend 40)
+		\item MA: required are 25-100 pages (we recommend 50)
+		\item Counting starts with the Introduction (first chapter) and ends with the Conclusion (last chapter)
+	\end{itemize}
+
+	\item Citations
+	\begin{itemize}
+		\item Citations style \textbf{either (Author, year) or [num]}. We recommend the first but chose what fits your style of writing best as long as you stay consistent and don't mix both citation styles.
+		\item Citations are placed at the \textbf{end} of the sentence, before the dot ("silent" reference). Exception: "Horvàth et al (2020) have shown \dots" ("loud" reference).
+		\item You need to mark \textbf{everything} with a reference that is not part of the contribution or the result (ie your own work) of this particular document (ie referencing your own work requires a citation). This can include figures (also recreated ones), tables, algorithms, lemmata, results, arguments etc.
+	\end{itemize}
+
+	\item Bibliography \label{general_bib}
+	\begin{itemize}
+		\item Not all types of sources (web pages, proceedings, books) come with the same set of metadata (author, year, edition, date of access, link, chapter, pages) neither is necessarily all the information relevant. Present the information that is necessary for the reader to find the cited source (and perhaps the relevant section) but avoid overloading the entries with redundant or unncecessary information.
+		\item Scientifc context/ related work: journal article $>$ conference $>$ workshop paper
+		\item Basics: textbooks
+		\item Misc: web pages
+		\item Datasets: available on websites but most of them are associated with a publication 
+	\end{itemize}
+
+\end{itemize}
+
+\subsection{Notation and conventions}
+
+\begin{itemize}
+	\item Adhere to field specific conventions regarding vocabulary and technical terms, variables and acronyms.
+	\item Avoid using ambiguous words (normal, canonical \dots) except when properly introduced beforehand
+	\item Definitions should be as formal as possible, a prose explanation of something is good style but only complementory.
+	\item Different sources can use the same variable with different meanings. When citing you can adapt those definitions as to avoid ambiguous use for the variables within your document. Stay \textbf{consistent} within your document!
+	\item \textbf{TODO} ref to something from Knuth pp 1-8
+\end{itemize}
+
+\section{Visual Presentation}
+
+In addition to a well strucutred content a tidy and consistent visual presentation greatly benefits readability. We highly suggest you use \LaTeX.
+
+\subsection{Text}
+\begin{itemize}
+	\item No headline after a headline
+	\item Use a readable font
+	\item Font size: 10-12pt
+\end{itemize}
+
+\subsection{Non-Text elements}
+
+\begin{itemize}
+	\item \LaTeX: \textbf{Floats} \footnote{\href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{https://en.wikibooks.org/wiki/LaTeX/Floats,\_Figures\_and\_Captions}}
+	\begin{itemize}
+		\item $\exists \Rightarrow$ use them
+		\item Floats wrap around nearly everything that is non-text. They enumerate themselves automatically, can be referenced by name set in $\backslash$label\{\dots\} via $\backslash $ref\{\dots\} and provide a place for a $\backslash$caption\{\dots\}
+		\item Each float needs to be referenced and explained in the text
+		\item Each float has a caption that gives a standalone explanation
+		\item Place floats close to where they are referenced to in the text
+	\end{itemize}
+	\item On a plot each axis needs to have a label
+	\item When citing a table from another document, do not use a screenshot instead rebuild the table 
+	\item Never use image files such as .png/ .jpeg when avoidable. Use \textbf{vector graphics}!
+\end{itemize}
+
+\section{Structure of a thesis}
+
+See template when available
+
+\begin{enumerate}
+	\item Title page
+		\begin{itemize}
+			\item Title
+			\item Name
+			\item Date
+			\item Supervisor
+			\item Examiner
+			\item Logo of University of Bonn and the MLAI group
+		\end{itemize}
+	\item Abstract
+		\begin{itemize}
+			\item BT/MT: max 1 page
+			\item Reports: max $\frac{1}{4}$ page
+			\item content: what, why, how, results
+		\end{itemize}
+	\item Acknowledgements/ inspirational quote (optional)
+	\item Eigenständigkeitserklärung
+	\item Table of content
+	\item Lists of Figures, Tables, Abbreviations and Variables (or after bibliography; BT: optional, MT: probably helpful)
+	\item Introduction
+		\begin{itemize}
+			\item \textbf{TODO} reference Zobel Writing for Computer Scientists \cite{zobel_writing}
+			\item motivation
+			\item gist of related work
+			\item research questions in prose
+			\item outline and structure of thesis
+		\end{itemize}
+	\item Related Work
+	\item Preliminaries
+		\begin{itemize}
+			\item Formally introduce definitions, notation and concepts required to understand the remainder of the document
+			\item Target audience: explain everything with as much detail such that a fellow student of yours would be able to understand the document completely. If something was new to you before the thesis: explain it.
+			\item You can (and should) give illustrative examples using pictures/ figures to aid comprehension
+		\end{itemize}
+	\item Main section
+		\begin{itemize}
+			\item This can span multiple chapters
+			\item start with a formal definition of your problem/ research question(s)
+			\item describe and motivate your solution; take your time, describe preliminary experiments and trials, visualize examples
+			\item how will you solve the problem
+			\item why did you chose to do something one way over the other (if two ways are basically equivalent, state this fact and say that you simply preferred doing it this way)
+		\end{itemize}
+	\item Experiments\\
+		Before conduction
+		\begin{itemize}
+			\item Describe datasets
+			\item Setup
+			\item What metrics will you report within one experiment (eg error or loss) and across experiments (eg standard deviation on results)
+			\item Baselines/ frames of reference (eg other algorithms)
+			\item (Briefly) describe all hyperparameters (of all the methods you use) you had to chose and explain your choice
+			\item Explain how your solution will solve the research problem
+		\end{itemize} 
+		After conduction
+		\begin{itemize}
+			\item Present the results, if possible visualize them
+			\item complete, extensive and objective description of results (this may feel very dry and weird to write at first)
+			\item interpret the results
+			\item point out expected/ unexpected results
+			\item determine whether the results constitute a success regarding the research questions
+		\end{itemize}
+	\item Conclusion and Future Work
+		\begin{itemize}
+			\item Summary of thesis
+			\item Repeat research question(s)
+			\item What was your contribution to solve it
+			\item Result of the interpretation
+			\item What could be the next steps or further avenues of research from here on?
+		\end{itemize}
+	\item Bibliography
+		\begin{itemize}
+			\item See Bibliography in \ref{general_bib}
+		\end{itemize}
+	\item Appendix
+		\begin{itemize}
+			\item Additional Figures
+			\item lengthy/ detailed proofs
+		\end{itemize}
+\end{enumerate}
+
+\section{Scopes and scales}
+
+\subsection{Theses}
+
+\paragraph{Bachelor Thesis} \label{Scope BT}
+\begin{itemize}
+	\item Independent research of literature and interpretation of results. 
+	\item Appropriate presentation as a scientific document
+	\item Citing mostly text books and only few (proper) papers is okay
+\end{itemize}
+
+\paragraph{Master Thesis} \label{Scope MT}
+\begin{itemize}
+	\item Work autonomously
+	\item Considerable length
+	\item Solve a significant research problem
+	\item Presentation of the research problem and solution within the context of current research
+	\item Reflecting knowledge on the current state of the art
+	\item Working with primary sources: Papers and the most recent research
+	\item Adhere to scientific principles
+	\item Demonstrate ability to creatively apply knowledge on the problem at hand
+\end{itemize}
+
+\subsection{Reports}
+
+\paragraph{Project Group}
+	\begin{itemize}
+		\item See BT in \ref{Scope BT} but less content and less literature research
+		\item Work together as a group
+	\end{itemize}
+\paragraph{Seminar Report}
+	\begin{itemize}
+		\item Summarize and discuss scientific papers autonomously
+		\item Summarize content within the context of the seminar
+		\item Discuss, analyze and compare content with fellow students and try to see the overall direction of research
+	\end{itemize}
+\paragraph{Lab Report}
+	\begin{itemize}
+		\item  MT in \ref{Scope MT} but less content
+	\end{itemize}
+
+% \section{Tooling}
+% \textbf{TODO}
+
+\printbibliography
+
+\end{document}
