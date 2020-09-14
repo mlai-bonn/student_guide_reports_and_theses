@@ -1,0 +1,45 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\tikzset{
+    label/.style=
+    {
+        minimum width = 3cm,
+        text width = 3cm,
+        draw=white,
+        fill=white
+    }
+}
+
+\tikzset{
+    box/.style=
+    {
+        rectangle,
+        minimum width = 3cm,
+        text width = 3cm,
+        draw=black,
+        fill=white
+    }
+}
+
+\tikzset{
+    round/.style=
+    {
+        rectangle,
+        dashed,
+        minimum width = 3cm,
+        text width = 3cm,
+        draw=black,
+        fill=white
+    }
+}
+
+
+\begin{document}
+
+\input{thesis_timeline}
+
+\end{document}
+

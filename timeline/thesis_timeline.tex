@@ -1,0 +1,128 @@
+
+\begin{tikzpicture}
+\node[label] (time0) at (0,0) {Deadline};
+\node[anchor=west, label] (a0) at ($(time0.west) - (0,2) $) {Ongoing Activities};
+\node[anchor=west, label] (m0) at ($(a0.west) - (0,2) $) {Work Packages};
+\node[anchor=west, label] (t0) at ($(m0.west) - (0,2) $) {Tasks};
+\node[anchor=west, label] (s0) at ($(t0.west) - (0,4) $) {Mile Stones};
+
+\node[anchor=north west, box, dotted] (a1) at ($(a0.north east) + (1,0) $) {discussing};
+\node[anchor=north west, box, dotted] (a2) at ($(a1.north east) + (1,0) $) {writing; reading};
+\node[anchor=north west, box, dotted] (a3) at ($(a2.north east) + (1,0) $) {writing; reading};
+\node[anchor=north west, box, dotted] (a4) at ($(a3.north east) + (1,0) $) {writing; reading};
+\node[anchor=north west, box, dotted] (a5) at ($(a4.north east) + (1,0) $) {writing; reading};
+\node[anchor=north west, box, dotted] (a6) at ($(a5.north east) + (1,0) $) {writing};
+\node[anchor=north west, box, dotted] (a7) at ($(a6.north east) + (1,0) $) {writing};
+\node[anchor=north west, box, dotted] (a8) at ($(a7.north east) + (1,0) $) {writing};
+\node[anchor=north west, box, dotted] (a8a) at ($(a8.north east) + (1,0) $) {writing; rehearsing};
+\node[anchor=north west, box, dotted] (a9) at ($(a8a.north east) + (1,0) $) {worrying};
+
+\node[anchor=north west, box, dotted] (time1) at ($(time0.north east) + (1,0) $) {};
+\node[anchor=north west, box, dotted] (time2) at ($(time1.north east) + (1,0) $) {One month after topic selection};
+\node[anchor=north west, box, dotted] (time3) at ($(time2.north east) + (1,0) $) {};
+\node[anchor=north west, box, dotted] (time4) at ($(time3.north east) + (1,0) $) {};
+\node[anchor=north west, box, dotted] (time5) at ($(time4.north east) + (1,0) $) {Three months before submission deadline};
+\node[anchor=north west, box, dotted] (time6) at ($(time5.north east) + (1,0) $) {Two months before submission deadline};
+\node[anchor=north west, box, dotted] (time7) at ($(time6.north east) + (1,0) $) {One month before submission deadline};
+\node[anchor=north west, box, dotted] (time8) at ($(time7.north east) + (1,0) $) {};
+\node[anchor=north west, box, dotted] (time8a) at ($(time8.north east) + (1,0) $) {};
+\node[anchor=north west, box, dotted] (time9) at ($(time8a.north east) + (1,0) $) {One Week before the official submission deadline};
+
+
+
+\node[anchor=north west, box] (m1) at ($(m0.north east) + (1,0) $) {Topic Selection};
+\node[anchor=north west, box] (m2) at ($(m1.north east) + (1,0) $) {Research Question and Concept\-ualization};
+\node[anchor=north west, box] (m3) at ($(m2.north east) + (1,0) $) {Detailed Planning};
+\node[anchor=north west, box] (m4) at ($(m3.north east) + (1,1) $) {Literature Review and Digestion};
+\node[anchor=north west, box] (m5) at ($(m4.north east) + (1,-1) $) {Implementa\-tion and Debugging};
+\node[anchor=north west, box] (m6) at ($(m5.north east) + (1,0) $) {Empirical Evaluation};
+\node[anchor=north west, box] (m7) at ($(m6.north east) + (1,0) $) {Drafting the Final Manuscript};
+\node[anchor=north west, box] (m8) at ($(m7.north east) + (1,0) $) {Review and Rewrite};
+\node[anchor=north west, box] (m11) at ($(m8.north east) + (1,1) $) {Preparation of Presentation};
+\node[anchor=north west, box] (m9) at ($(m8.north east) + (5,0) $) {Submission};
+\node[anchor=north west, box] (m10) at ($(m9.north west) + (0,1) $) {Presentation};
+\draw[->] (m1) -- (m2); 
+\draw[->] (m2) -- (m3); 
+\draw[->] (m3) -- (m4); 
+\draw[->] (m4) -- (m5); 
+\draw[->] (m4) .. controls ($ (m5) + (0,1) $) .. (m6); 
+\draw[->] (m4) .. controls ($ (m6) + (0,1) $) .. (m7); 
+\draw[->] (m5) -- (m6); 
+\draw[->] (m6) -- (m7);
+\draw[->] (m7) -- (m8); 
+\draw[->] (m8) -- (m9);
+\draw[->] (m11) -- (m10);
+
+\node[anchor=north west, box, dotted] (t1) at ($(t0.north east) + (1,0) $) {Find an interesting topic and a rough research question. Discuss with your supervisor};
+\node[anchor=north west, box, dotted] (t2) at ($(t1.north east) + (1,0) $) {\small
+Formulate a precise research question;\\
+Decide which methods to use;\\
+Decide how to evaluate your methods;\\
+Get feedback from your supervisor;\\
+};
+\node[anchor=north west, box, dotted] (t3) at ($(t2.north east) + (1,0) $) {\small
+Make a schedule for yourself;\\
+Create an initial document and table of content;\\
+};
+\node[anchor=north west, box, dotted] (t4) at ($(t3.north east) + (1,0) $) {\small
+Get to know the literature;\\
+Read and take notes;\\
+Write a first draft of the related work section;\\};
+\node[anchor=north west, box, dotted] (t5) at ($(t4.north east) + (1,0) $) {\small
+Prepare toy datasets and workflow;\\
+Implement and debug your algorithms and system;\\
+Optionally find and test libaries;\\
+};
+\node[anchor=north west, box, dotted] (t6) at ($(t5.north east) + (1,0) $) {\small
+Run experiments;\\
+Evaluate results;\\
+Visualize results;\\
+Draw conclusions;\\
+Run more experiments and repeat\\
+};
+\node[anchor=north west, box, dotted] (t7) at ($(t6.north east) + (1,0) $) {\small 
+Sketch section, subsection, paragraph contents;\\
+Write paragraphs;\\
+Check order;\\
+Finally look for the big picture;
+};
+\node[anchor=north west, box, dotted] (t8) at ($(t7.north east) + (1,0) $) {\small
+Revise content;\\
+Revise language;\\
+Revise formally;\\
+
+};
+\node[anchor=north west, box, dotted] (t8a) at ($(t8.north east) + (1,0) $) {\small
+Prepare slides;\\
+Rehearse talk;\\
+};
+\node[anchor=north west, box, dotted] (t9) at ($(t8a.north east) + (1,0) $) {\small
+Hand in Thesis and accompanying materials; 
+if not submitting online, send final pdf version to your supervisor};
+
+\node[anchor=north west, round] (s1) at ($(s0.north east) + (1,0) $) {Agreement with your supervisor on topic};
+\node[anchor=north west, round] (s2) at ($(s1.north east) + (1,0) $) {Accepted Proposal};
+\node[anchor=north west, round] (s3) at ($(s2.north east) + (1,0) $) {Table of Content};
+\node[anchor=north west, round] (s4) at ($(s3.north east) + (1,0) $) {};
+\node[anchor=north west, round] (s5) at ($(s4.north east) + (1,0) $) {};
+\node[anchor=north west, round] (s6) at ($(s5.north east) + (1,0) $) {};
+\node[anchor=north west, round] (s7) at ($(s6.north east) + (1,0) $) {Draft version sent to supervisor and several friends\&family};
+\node[anchor=north west, round] (s8) at ($(s7.north east) + (1,0) $) {Final manuscript;\\
+Presentation slides;\\
+A 30min talk;\\};
+\node[anchor=north west, round] (s8a) at ($(s8.north east) + (1,0) $) {Final manuscript;\\
+Presentation slides;\\
+A 30min talk;\\};
+\node[anchor=north west, round] (s9) at ($(s8a.north east) + (1,0) $) {Thesis submitted; Presentation given}; 
+
+
+
+
+\coordinate (tn) at (time0.north);
+\coordinate (ss) at (s0.south);
+\coordinate (start) at ($ (t2.east) + (0.5, 0) $);
+\draw[dashed, -] (tn -| start) -- (ss -| start); 
+\node [rotate=90, anchor=east, rectangle, dashed, draw=black, fill=white] at (tn -| start) {Registration at the examination office};
+
+
+\end{tikzpicture}
