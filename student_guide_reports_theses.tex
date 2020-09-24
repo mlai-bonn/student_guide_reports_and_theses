@@ -4,8 +4,8 @@
 \usepackage{titling}
 
 \usepackage[english]{babel}
-\usepackage{biblatex}
-\bibliography{bibliography.bib }
+\usepackage[backend=bibtex8]{biblatex}
+\addbibresource{bibliography.bib} 
 
 \date{} % remove/ fill in to include date
 
@@ -34,7 +34,7 @@ Writing is a skill that needs to be refined over time. We hope this document wil
 \paragraph{Disclaimer} This document is meant as a guide to give you an idea of our expectations regarding written presentation of your results. It can not and does not constitute an exhaustive list of our formal requirements. Thus this document does not provide a base for arguments over grades.
 
 \section{Scientific writing in general}
-This section contains best practices, tips and tricks on good formal, scientific writing. Presenting your work in an accessible way is as much part of the scientific process as developing methods and conducting experiments. A well strcutured text reflects sound methodical thinking and makes it easier for the reader to concentrate on the content of your work.
+This section contains best practices, tips and tricks on good formal, scientific writing. Presenting your work in an accessible way is as much part of the scientific process as developing methods and conducting experiments. A well strcutured text reflects sound methodical thinking and makes it easier for the reader to concentrate on the content of your work. \cite{zobel_writing}
 
 \subsection{Language}
 \begin{itemize}
@@ -89,7 +89,7 @@ This section contains best practices, tips and tricks on good formal, scientific
 	\item Avoid using ambiguous words (normal, canonical \dots) except when properly introduced beforehand
 	\item Definitions should be as formal as possible, a prose explanation of something is good style but only complementory.
 	\item Different sources can use the same variable with different meanings. When citing you can adapt those definitions as to avoid ambiguous use for the variables within your document. Stay \textbf{consistent} within your document!
-	\item \textbf{TODO} ref to something from Knuth pp 1-8
+	\item See Section~\ref{sec:helpful-resources}, esp. \cite[pp. 1-8]{knuth_mathematical_writing}
 \end{itemize}
 
 \section{Visual Presentation}
@@ -145,7 +145,7 @@ See template when available
 	\item Lists of Figures, Tables, Abbreviations and Variables (or after bibliography; BT: optional, MT: probably helpful)
 	\item Introduction
 		\begin{itemize}
-			\item \textbf{TODO} reference Zobel Writing for Computer Scientists \cite{zobel_writing}
+			\item cf. Section~\ref{sec:helpful-resources}, esp. \cite{zobel_writing}
 			\item motivation
 			\item gist of related work
 			\item research questions in prose
@@ -244,10 +244,13 @@ See template when available
 		\item  MT in \ref{Scope MT} but less content
 	\end{itemize}
 
-\section{Helpful Resources}
+\section{Helpful Resources} \label{sec:helpful-resources} 
 
 \begin{itemize}
-       \item \hyperref{https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf}{}{}{"How to read a Paper"} by S. Keshav
+       \item \citetitle{keshav_how_to_read} by \textcite{keshav_how_to_read}
+       \item \citetitle{zobel_writing} by \textcite{zobel_writing}
+       \item \citetitle{knuth_mathematical_writing} by \textcite{knuth_mathematical_writing}
+       \item \citetitle{winston_how_to_speak} by \textcite{winston_how_to_speak}
 \end{itemize}
 
  % \section{Tooling}
