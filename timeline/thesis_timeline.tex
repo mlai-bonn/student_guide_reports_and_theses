@@ -10,10 +10,10 @@
 \node[anchor=north west, box, dotted] (a2) at ($(a1.north east) + (1,0) $) {writing; reading};
 \node[anchor=north west, box, dotted] (a3) at ($(a2.north east) + (1,0) $) {writing; reading};
 \node[anchor=north west, box, dotted] (a4) at ($(a3.north east) + (1,0) $) {writing; reading};
-\node[anchor=north west, box, dotted] (a5) at ($(a4.north east) + (1,0) $) {writing; reading};
-\node[anchor=north west, box, dotted] (a6) at ($(a5.north east) + (1,0) $) {writing};
-\node[anchor=north west, box, dotted] (a7) at ($(a6.north east) + (1,0) $) {writing};
-\node[anchor=north west, box, dotted] (a8) at ($(a7.north east) + (1,0) $) {writing};
+\node[anchor=north west, box, dotted] (a5) at ($(a4.north east) + (1,0) $) {writing; reading; coding};
+\node[anchor=north west, box, dotted] (a6) at ($(a5.north east) + (1,0) $) {writing; reading; coding};
+\node[anchor=north west, box, dotted] (a7) at ($(a6.north east) + (1,0) $) {writing; reading};
+\node[anchor=north west, box, dotted] (a8) at ($(a7.north east) + (1,0) $) {writing; reading};
 \node[anchor=north west, box, dotted] (a8a) at ($(a8.north east) + (1,0) $) {writing; rehearsing};
 \node[anchor=north west, box, dotted] (a9) at ($(a8a.north east) + (1,0) $) {worrying};
 
@@ -44,9 +44,9 @@
 \draw[->] (m1) -- (m2); 
 \draw[->] (m2) -- (m3); 
 \draw[->] (m3) -- (m4); 
-\draw[->] (m4) -- (m5); 
-\draw[->] (m4) .. controls ($ (m5) + (0,1) $) .. (m6); 
-\draw[->] (m4) .. controls ($ (m6) + (0,1) $) .. (m7); 
+\draw[<->] (m4) -- (m5); 
+\draw[<->] (m4) .. controls ($ (m5) + (0,1) $) .. (m6); 
+\draw[<->] (m4) .. controls ($ (m6) + (0,1) $) .. (m7); 
 \draw[->] (m5) -- (m6); 
 \draw[->] (m6) -- (m7);
 \draw[->] (m7) -- (m8); 
@@ -102,17 +102,15 @@ if not submitting online, send final pdf version to your supervisor};
 
 \node[anchor=north west, round] (s1) at ($(s0.north east) + (1,0) $) {Agreement with your supervisor on topic};
 \node[anchor=north west, round] (s2) at ($(s1.north east) + (1,0) $) {Accepted Proposal};
-\node[anchor=north west, round] (s3) at ($(s2.north east) + (1,0) $) {Table of Content};
-\node[anchor=north west, round] (s4) at ($(s3.north east) + (1,0) $) {};
-\node[anchor=north west, round] (s5) at ($(s4.north east) + (1,0) $) {};
-\node[anchor=north west, round] (s6) at ($(s5.north east) + (1,0) $) {};
+\node[anchor=north west, round] (s3) at ($(s2.north east) + (1,0) $) {Table of Contents};
+\node[anchor=north west, round] (s4) at ($(s3.north east) + (1,0) $) {Draft of the related work section};
+\node[anchor=north west, round] (s5) at ($(s4.north east) + (1,0) $) {A working implementation of your idea};
+\node[anchor=north west, round] (s6) at ($(s5.north east) + (1,0) $) {Draft of the experimental section};
 \node[anchor=north west, round] (s7) at ($(s6.north east) + (1,0) $) {Draft version sent to supervisor and several friends\&family};
-\node[anchor=north west, round] (s8) at ($(s7.north east) + (1,0) $) {Final manuscript;\\
+\node[anchor=north west, round] (s8) at ($(s7.north east) + (1,0) $) {Final manuscript};
+\node[anchor=north west, round] (s8a) at ($(s8.north east) + (1,0) $) {
 Presentation slides;\\
-A 30min talk;\\};
-\node[anchor=north west, round] (s8a) at ($(s8.north east) + (1,0) $) {Final manuscript;\\
-Presentation slides;\\
-A 30min talk;\\};
+A 30min talk\\};
 \node[anchor=north west, round] (s9) at ($(s8a.north east) + (1,0) $) {Thesis submitted; Presentation given}; 
 
 

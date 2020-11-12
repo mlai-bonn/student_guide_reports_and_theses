@@ -9,14 +9,49 @@
 
 \date{} % remove/ fill in to include date
 
+% strange stuff for large page with timeline
+\usepackage{rotating}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\tikzset{>=latex}
+
+\tikzset{
+    label/.style=
+    {
+        minimum width = 3cm,
+        text width = 3cm,
+        draw=white,
+        fill=white
+    }
+}
+
+\tikzset{
+    box/.style=
+    {
+        rectangle,
+        minimum width = 3cm,
+        text width = 3cm,
+        draw=black,
+        fill=white
+    }
+}
+
+\tikzset{
+    round/.style=
+    {
+        rectangle,
+        dashed,
+        minimum width = 3cm,
+        text width = 3cm,
+        draw=black,
+        fill=white
+    }
+}
+
 \begin{document}
 
-\title{\textbf{Student guide for reports and theses at MLAI}}
-% \begin{titlepage}
-% 	\begin{center}
-% 		
-% 	\end{center}
-% \end{titlepage}
+\title{Student guide for reports and theses at MLAI}
 
 \maketitle
 
@@ -31,7 +66,7 @@
 
 %\newpage
 
-\section{Introduction}
+\section{Initial Remarks}
 Writing is a skill that needs to be refined over time. We hope this document will give you a head start, not only by providing best practice advice, but by directing your attention to certain things that will enable you to better reflect on the quality of your document.
 
 \paragraph{Disclaimer} This document is meant as a guide to give you an idea of our expectations regarding written presentation of your results. It can not and does not constitute an exhaustive list of our formal requirements. Thus this document does not provide a base for arguments over grades.
@@ -265,14 +300,46 @@ You may use it as you see fit and change it according to your liking for your th
 		\item  MA in \ref{Scope MA} but less content
 	\end{itemize}
 
+
+\section{A Possible Timeline for your Thesis}
+
+It is your task to structure your own work. 
+Part of writing a thesis is showing us that you are able to work independently on a scientific topic. 
+Hence, we will not force you to do anything or to adhere to any structure that we might feel suitable for a thesis. 
+However, Figure~\ref{fig:thesistimeline} provides a generic timeline for your thesis that you might consider as a starting point for your own time table.
+
+
+\section{Supervision}
+
+When writing a thesis or a report, you will have a supervisor who is a member of our group.
+
+
+
+\begin{sidewaysfigure}
+
+  \resizebox{\textheight}{!}{
+    \input{timeline/thesis_timeline}
+  }
+
+  \caption{A possible timeline of your thesis.}
+  \label{fig:thesistimeline}
+\end{sidewaysfigure}
+
+
+
 \section{Helpful Resources} \label{sec:helpful-resources} 
+
+Many smart people have written on writing. 
+Here are a few references that extend (and probably partially contradict) this compact document.
+Feel free to have a look!
 
 \begin{itemize}
        \item \citetitle{keshav_how_to_read} by \textcite{keshav_how_to_read}
        \item \citetitle{zobel_writing} by \textcite{zobel_writing}
        \item \citetitle{knuth_mathematical_writing} by \textcite{knuth_mathematical_writing}
        \item \citetitle{winston_how_to_speak} by \textcite{winston_how_to_speak}
-\end{itemize}
+       \item \citetitle{strunkwhite} by \textcite{strunkwhite}
+\end{itemize}{}
 
  % \section{Tooling}
  % \textbf{TODO}
