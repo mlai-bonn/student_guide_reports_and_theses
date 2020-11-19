@@ -13,12 +13,18 @@
 
 \newcommand{\eg}[2]{ \xmark #1 $\rightarrow$ \cmark #2}
 
+\newif\ifchecklist
+
 \date{} % remove/ fill in to include date
 
 % strange stuff for large page with timeline
 \usepackage{rotating}
 \usepackage{tikz}
+\usepackage{pgfplotstable}
 \usetikzlibrary{calc}
+
+\usepackage{hyperref}
+\usepackage{cleveref}
 
 \tikzset{>=latex}
 
@@ -184,7 +190,7 @@ In addition to a well structured content a tidy and consistent visual presentati
 	\item Never use image files such as .png / .jpeg when avoidable. Use \textbf{vector graphics}!
 \end{itemize}
 
-\section{Structure of a thesis}
+\section{Structure of a thesis} \label{sec:structure}
 
 Most theses (and articles, for that matter), are similarly structured. 
 A similar structure helps your more seasoned readers (think: examiners) to focus on the content (i.e., what you did). 
@@ -365,5 +371,62 @@ Feel free to have a look!
 % \textbf{TODO}
 
 \printbibliography
+
+\appendix
+
+%Checkliste ein und ausschalten
+\checklisttrue
+%\checklistfalse
+\ifchecklist 
+\newpage
+\onecolumn
+\input{checklist}
+\twocolumn
+\else
+\fi 
+\newpage
+\section{List of required Latex packages}
+In this sections you can find a list of the packages used for the different templates.
+
+\begin{itemize}
+	\item Preable:
+	\begin{itemize}[]
+		\item polyglossia
+		\item algorithm
+		\item algpseudocode
+		\item enumitem
+		\item csquotes
+		\item metalogo
+		\item fancyvrb
+		\item varioref
+		\item hyperref
+		\item cleveref
+		\item biblatex 
+	\end{itemize}
+	\item Report and Thesis:
+	\begin{itemize}
+		\item geometry
+		\item translations
+		\item xcolor
+		\item graphicx
+		\item booktabs
+		\item mathtools
+		\item ntheorem
+		\item iftex
+		\item inputenc
+		\item fontenc
+		\item textcomp
+		\item tgpagella
+		\item fontspec
+	\end{itemize}
+	\item Thesis:
+	\begin{itemize}
+		\item fmtcount
+		\item emptypage
+		\item subcaption
+		\item caption
+	\end{itemize}
+\end{itemize}
+
 
 \end{document}

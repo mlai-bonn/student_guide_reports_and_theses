@@ -1,0 +1,55 @@
+% student_guide_reporst_theses.tex
+\newcounter{formcounter}
+\newcommand{\form}{\begin{Form}\ChoiceMenu[name=X\alph{formcounter}, radio,radiosymbol=\ding{52}]{}{ }\end{Form}&\begin{Form}\ChoiceMenu[name=X\alph{formcounter}, radio,radiosymbol=\ding{52}]{}{ }\end{Form}\stepcounter{formcounter}}
+
+\newcommand{\checklistheadline}[1]{%
+	\multicolumn{3}{c}{#1}\\\hline
+	&ToDo&Done}
+\section{Checklist}
+\begin{table}[h!]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.3}
+	\begin{tabular}{p{0.75\textwidth}cc}
+		\checklistheadline{\textbf{Scientific Writing}}\\
+		Work is in present tense (except for Related Work and parts of Conclusion&\form\\
+		Active voice  &\form\\
+		No contractions in the work&\form\\
+		No sentences spanning multiple-lines&\form\\
+		The text is consistent, British or American English&\form\\
+		The text is spell-checked&\form\\
+		
+		The length of the work matches the requirements&\form\\
+		The citation style is consistent and correct&\form\\
+		The bibliography is correct and complete&\form\\
+		Every result which is not from this particular document is referenced&\form\\
+		
+		There is no use ambiguous words &\form\\
+		The definitions are formally given &\form\\
+		The notation is consistent &\form\\
+		\checklistheadline{\textbf{Visual Presentation}}\\
+		There is no headline after a headline&\form\\
+		The font is readable with font size 10-12pt&\form\\
+		\textbf{All} floats have a caption, reference and standalone explanation&\form\\
+		\textbf{All} plot axes have labels&\form\\
+		There is no screenshot of a table&\form\\
+		All graphics are vector graphics or tizpictures&\form\\
+		\checklistheadline{\textbf{Structure}}\\
+		The work is structured properly, according to \Cref{sec:structure}&\form\\
+
+		
+	\end{tabular}	
+
+%		\label{table1}
+%		\pgfplotstabletypeset[
+%		col sep=comma, string type,
+%		columns/column1/.style={
+%			column name=\textsc{Task}},
+%		columns/column2/.style={
+%			column name=\textsc{ToDo}},
+%		columns/column3/.style={
+%			column name=\textsc{Done}},
+%		every head row/.style={
+%			after row={\toprule}},
+%		every last row/.style={after row=\bottomrule},]{checklisttable.csv} 
+	\end{center}
+\end{table}
