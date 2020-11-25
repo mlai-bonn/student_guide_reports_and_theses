@@ -9,9 +9,9 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions \relax 
 
-\LoadClass[a4paper,fleqn,10pt]{article}
+\LoadClass[a4paper,fleqn,11pt]{article}
 
-\RequirePackage[margin=2.25cm]{geometry}
+\RequirePackage[margin=3cm]{geometry}
 
 \RequirePackage{translations}
 
@@ -105,21 +105,34 @@
 		{\large \@date}\par\vskip1.5em
 	\end{center} \par \vskip1.5em 
 }
-\let\oldmaketitle\maketitle 
-\renewcommand{\maketitle}{
-	\par\begingroup%
-		\renewcommand{\thefootnote}{%
-			\@fnsymbol \c@footnote%
-		}%
-		\def\@makefnmark {\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
-		\long\def\@makefntext##1{%
-			\parindent1em\noindent\hb@xt@1.8em{\hss\@textsuperscript{\normalfont\@thefnmark}}##1%
-		}
-		\if@twocolumn\ifnum\col@number=\@ne\@maketitle
-			
-}
+%\let\oldmaketitle\maketitle 
+%\renewcommand{\maketitle}{
+%	\par\begingroup%
+%		\renewcommand{\thefootnote}{%
+%			\@fnsymbol \c@footnote%
+%		}%
+%		\def\@makefnmark {\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+%		\long\def\@makefntext##1{%
+%			\parindent1em\noindent\hb@xt@1.8em{\hss\@textsuperscript{\normalfont\@thefnmark}}##1%
+%		}
+%		\if@twocolumn\ifnum\col@number=\@ne\@maketitle
+%			
+%}
 
-\RequirePackage{xcolor,graphicx,enumitem,booktabs}
+\RequirePackage{xcolor,graphicx,booktabs}
+
+\definecolor{ub-blue}{cmyk}{1,0.7,0,0}
+\definecolor{ub-yellow}{cmyk}{0,0.3,1,0}
+\definecolor{ub-gray}{cmyk}{0,0,0.15,0.55}
+
+\RequirePackage[hidelinks,breaklinks]{hyperref}
+\hypersetup{colorlinks=true,
+            linkcolor=black,
+            filecolor=black,
+            urlcolor=ub-blue,
+            citecolor=ub-blue, %black, %darkblue,
+            bookmarksnumbered=true
+            }
 
 
 \RequirePackage[fleqn,intlimits]{mathtools}
