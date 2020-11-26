@@ -51,6 +51,18 @@
 
 \RequirePackage{xcolor,graphicx,enumitem,booktabs}
 
+\definecolor{ub-blue}{cmyk}{1,0.7,0,0}
+\definecolor{ub-yellow}{cmyk}{0,0.3,1,0}
+\definecolor{ub-gray}{cmyk}{0,0,0.15,0.55}
+
+\RequirePackage[hidelinks,breaklinks]{hyperref}
+\hypersetup{colorlinks=true,
+            linkcolor=black,
+            filecolor=black,
+            urlcolor=ub-blue,
+            citecolor=ub-blue, %black, %darkblue,
+            bookmarksnumbered=true
+            }
 
 \RequirePackage[fleqn,intlimits]{mathtools}
 \RequirePackage[amsmath]{ntheorem} 
