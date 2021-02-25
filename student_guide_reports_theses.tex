@@ -131,14 +131,22 @@ This section contains best practices, tips and tricks on good formal, scientific
 		\item PG, SR, LR: 8-10 pages per person required
 		\item BA: required are 25-50 pages (we recommend 40)
 		\item MA: required are 25-100 pages (we recommend 50)
-		\item the pagecount starts with the Introduction (first chapter) and ends with the Conclusion (last chapter)
+		\item the pagecount starts with the Introduction (first chapter) and ends with the Conclusion (last chapter). 
+		\item The Bibliography is not part of the page count and you can have as many References as you like, without cutting into your page budget. 
 	\end{itemize}
 
 	\item Citations
 	\begin{itemize}
 		\item Citations style \textbf{either (Author, year) or [num]}. We recommend the first but chose what fits your style of writing best as long as you stay consistent and don't mix both citation styles.
-		\item Citations are placed at the \textbf{end} of the sentence, before the dot ("silent" reference). Exception: "Horv\'ath et al. (2020) have shown \dots" ("loud" reference).\\
+		\item Citations are placed at the \textbf{end} of the sentence, before the dot ("silent" reference). 
+
 		\eg{... by now is a well established fact. [42]}{... by now is a well established fact [42].}
+		\item Exception are ``loud references'', that is if the sentence is broken without using the reference explicitly: "Horv\'ath et al. (2020) have shown \dots".
+		Note that (Author, Year) citations differ in this case:
+
+		\eg{(Welke, 2020) uses references incorrectly.}{Welke (2021) shows that people can learn from past mistakes}. 
+
+		(Note the different placement of brackets)
 		\item You need to mark \textbf{everything} with a reference that is not part of the current contribution or the current result (i.e. your own work) of this particular document. In particular, referencing your own older work (e.g., a seminar report from last semester) requires a citation. This can include figures (also recreated ones), tables, algorithms, lemmata, results, arguments etc.
 	\end{itemize}
 
@@ -149,6 +157,10 @@ This section contains best practices, tips and tricks on good formal, scientific
 		\item Basics: textbooks
 		\item Misc: web pages
 		\item Datasets: Most are associated with a scientific publication. If they are distributed via a website this is also the place where you can usually find information on how to cite them properly.
+	\end{itemize}
+	\item Different \LaTeX-packages are available to handle citations and references. 
+	\begin{itemize}
+		\item \verb+natbib+ allows (Author, Year), as well as [num] styles. It has dedicated commands \verb+\citep{}+ for ``silent'' and \verb+\citet{}+ for ``loud'' citations.
 	\end{itemize}
 
 \end{itemize}
